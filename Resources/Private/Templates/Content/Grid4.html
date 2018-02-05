@@ -1,0 +1,47 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+
+    <f:layout name="Content"/>
+
+    <f:section name="Configuration">
+        <flux:form id="gridelement4col" label="4-spaltiger Container je 25% (div.row)" description="Bootstrap 4: 4-spaltiger div-Container. Jede Spalte 25%" >
+            <!-- Options -->
+            <flux:form.option name="group" value="Grid-Elemente"/>
+            <flux:form.option name="Fluidcontent" value="{sorting: 0}"/>
+            <!-- Fields-->
+            <flux:grid>
+                <flux:grid.row>
+                    <flux:grid.column name="col1" label="col1" style="width:25%;"></flux:grid.column>
+                    <flux:grid.column name="col2" label="col2" style="width:25%;"></flux:grid.column>
+                    <flux:grid.column name="col3" label="col3" style="width:25%;"></flux:grid.column>
+                    <flux:grid.column name="col4" label="col4" style="width:25%;"></flux:grid.column>
+                </flux:grid.row>
+            </flux:grid>
+        </flux:form>
+    </f:section>
+
+
+    <f:section name="Preview">
+
+    </f:section>
+
+
+    <f:section name="Main">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-3">
+                <flux:content.render area="col1"/>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <flux:content.render area="col2"/>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <flux:content.render area="col3"/>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <flux:content.render area="col4"/>
+            </div>
+        </div>
+    </f:section>
+</div>
